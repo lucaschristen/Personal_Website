@@ -51,6 +51,8 @@
       }
       .research-card h3 { color: #fff; }
       .research-card .muted { color: rgba(255,255,255,.8); }
+      .pub-item { cursor: help; }
+      .pub-popover { max-width: 36rem; }
     </style>
   </head>
   <body>
@@ -163,8 +165,31 @@
           <div class="col-12 col-lg-6">
             <h3 class="h5" style="color:var(--brand);">Publications (Peer‑Reviewed)</h3>
             <ul class="mb-4">
-              <li>— (to be added)</li>
+              <li class="pub-item"
+                  data-bs-toggle="popover"
+                  data-bs-trigger="hover focus"
+                  data-bs-title="Abstract"
+                  data-bs-custom-class="pub-popover"
+                  data-bs-content="The Hall-Héroult process is the main production process of aluminum, which consumes carbon electrodes to reduce alumina (Al2O3) to aluminum, while releasing the by-product carbon-dioxide (CO2). To overcome this issue and work towards a green transformation, laser reduction of Al2O3 has been proposed as a carbon-free aluminum production method. By irradiating a continuous-wave laser onto the Al2O3 surface, micro-sized aluminum particles are precipitated on the surface. Furthermore, the use of hydrogen as an ambient gas has shown the appearance of pores beneath to the surface, which furthermore contain aluminum particles. In this study, the correlation between the internal pore structure through hydrogen diffusion and the aluminum production on laser-irradiated Al2O3 is investigated. The pore structure is furthermore maximized in terms of volume by rotating the Al2O3 target during laser irradiation. Using a hydrogen atmosphere at 0.9bar, the diffusion of hydrogen depending on the laser fluence and its effect on the formation of pores is examined. The rotating speed of a 20mm diameter target size is varied between 2rpm and 4rpm. The laser power is constant at 1.5kW with a spot radius of 1.22mm to 3mm. Results show a successful increase of the pore volume by a factor of 20 considering the change from an argon to a hydrogen atmosphere under otherwise equal conditions. The abundance of Al particles in the pores is validated through scanning electron microscopy (SEM). The aluminum particle precipitation inside of the pores shows a directional behavior, as the particles are exclusively found at the bottom of the pores. The existence of aluminum particles in the pores concludes an increase of precipitated particles by increasing the pore volume as performed in this study.">
+                Lucas-Brian Christen, Masataka Watanabe, Hiroto Yamakami, Hokuto Sekine, Kimiya Komurasaki, Hiroyuki Koizumi.
+                <em>Hydrogen diffusion in liquid and boiling alumina by laser ablation towards a carbon-free aluminum production.</em>
+                <strong>Optics &amp; Laser Technology</strong>, 2025, <em>181 (Part C)</em>: 111935.
+                DOI: <a href="https://doi.org/10.1016/j.optlastec.2024.111935" target="_blank" rel="noopener">10.1016/j.optlastec.2024.111935</a>
+              </li>
+
+              <li class="pub-item"
+                  data-bs-toggle="popover"
+                  data-bs-trigger="hover focus"
+                  data-bs-title="Abstract"
+                  data-bs-custom-class="pub-popover"
+                  data-bs-content="In-situ resource utilization (ISRU) is a key aspect to establish a sustainable station on the Moon. Nevertheless, the extraction of metals from lunar regolith is lacking research often shadowed by the extraction of oxygen. In this study, laser ablation as a method for beneficiation with the potential for direct thermal reduction of regolith for metal extraction is introduced and demonstrated. Sintered samples of simulants EAC-1A, FJS-1, and JSC-2A are irradiated by a continuous-wave fiber laser with an intensity of 76MWm-2 at an output power of 1.5kW in an Ar atmosphere at 1bar. The emission spectrum shows the presence of atomic K and Na, hence proving successful thermal reduction and metal extraction. Furthermore, an SEM/EDX analysis of the collection plate to which the extracted species adhered proves the extraction of P, K, Fe, Na, Si, and O. During laser ablation, the surface temperature was measured and a maximum of 2823K was identified. The surface temperature is in accordance with the boiling points of the oxides P2O5, K2O, Na2O, and SiO2, suggesting the selective extraction of oxides from regolith according to their boiling points. Hence a multi-stage laser process for selective oxide extraction and beneficiation is suggested.">
+                Lucas-Brian Christen, Masataka Watanabe, Hiroto Yamakami, Hokuto Sekine, Kimiya Komurasaki, Ai Momozawa, Hiroyuki Koizumi.
+                <em>Laser processing of lunar regolith simulants for beneficiation and metal extraction.</em>
+                <strong>Vacuum</strong>, 2025, <em>240</em>: 114417.
+                DOI: <a href="https://doi.org/10.1016/j.vacuum.2025.114417" target="_blank" rel="noopener">10.1016/j.vacuum.2025.114417</a>
+              </li>
             </ul>
+
             <h3 class="h5" style="color:var(--brand);">International Conferences</h3>
             <ul class="mb-4">
               <li>— (to be added)</li>
@@ -200,7 +225,6 @@
             The University of Tokyo<br>
             Graduate School of Engineering<br>
             Department of Aeronautics and Astronautics<br>
-            Komurasaki-Koizumi Laboratory<br>
             7-3-1 Hongo, Bunkyo-ku, Tokyo 113-8656, Japan<br>
             Tel: +81-3-5841-6559
           </address>
@@ -245,5 +269,12 @@
 
     <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        document.querySelectorAll('[data-bs-toggle="popover"]').forEach(function (el) {
+          new bootstrap.Popover(el, { container: 'body', html: false, placement: 'auto' });
+        });
+      });
+    </script>
   </body>
 </html>
