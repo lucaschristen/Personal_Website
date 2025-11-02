@@ -22,6 +22,35 @@
       .muted { color:#6c757d; }
       .avatar { width:120px; height:120px; border-radius:50%; object-fit:cover; background:#e9ecef; }
       footer { border-top: 3px solid var(--brand); }
+      .research-card {
+        position: relative;
+        border-radius: .5rem;
+        overflow: hidden;
+        color: #fff;
+        min-height: 220px;
+        display: flex;
+        align-items: flex-end;
+      }
+      .research-card .bg {
+        position: absolute;
+        inset: 0;
+        background-size: cover;
+        background-position: center;
+        filter: saturate(0.9);
+        opacity: 0.45;            /* image transparency so text stays readable */
+      }
+      .research-card .shade {
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,.0), rgba(0,0,0,.6) 70%);
+      }
+      .research-card .content {
+        position: relative;
+        z-index: 1;
+        padding: 1rem 1.25rem;
+      }
+      .research-card h3 { color: #fff; }
+      .research-card .muted { color: rgba(255,255,255,.8); }
     </style>
   </head>
   <body>
@@ -38,6 +67,7 @@
             <li class="nav-item"><a class="nav-link" href="#research">Research</a></li>
             <li class="nav-item"><a class="nav-link" href="#academic">Academic Work</a></li>
             <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            <li class="nav-item"><a class="nav-link" href="profile.html">Personal Profile</a></li>
           </ul>
         </div>
       </div>
@@ -54,6 +84,24 @@
             <h1 class="display-6 fw-bold mb-2" style="color:var(--brand);">Lucas‑Brian Christen</h1>
             <p class="lead mb-2">PhD Student, Komurasaki & Koizumi Laboratory, Department of Aeronautics and Astronautics, The University of Tokyo</p>
             <p class="mb-0 muted">Research focus: Laser processing of lunar regolith for ISRU</p>
+            <p class="mb-0">
+              <i class="bi bi-linkedin me-2"></i>
+              <a class="text-decoration-none" href="https://www.linkedin.com/in/lucas-brian-christen" target="_blank" rel="noopener">
+                www.linkedin.com/in/lucas-brian-christen
+              </a>
+            </p>
+            <p class="mb-0">
+              <i class="bi bi-shield-check me-2"></i>
+              <a class="text-decoration-none" href="https://orcid.org/0009-0008-0968-349X" target="_blank" rel="noopener">
+                https://orcid.org/0009-0008-0968-349X
+              </a>
+            </p>
+            <p class="mb-0">
+              <i class="bi bi-journal-text me-2"></i>
+              <a class="text-decoration-none" href="https://www.researchgate.net/profile/Lucas-Brian-Christen?ev=hdr_xprf" target="_blank" rel="noopener">
+                https://www.researchgate.net/profile/Lucas-Brian-Christen?ev=hdr_xprf
+              </a>
+            </p>
           </div>
         </div>
       </div>
@@ -82,17 +130,25 @@
         <p class="mb-4">Current interests include vaporization behavior of lunar simulants, multi‑wavelength pyrometry, and chemically selective oxide processing under controlled atmospheres.</p>
         <div class="row g-4">
           <div class="col-md-6">
-            <div class="p-3 border rounded-3 h-100">
-              <h3 class="h5 mb-1" style="color:var(--brand);">Laser‑Driven Processing of Lunar Regolith</h3>
-              <p class="mb-2">Studying mass‑loss, vapor composition, and melt evolution under high‑flux CW fiber lasers.</p>
-              <div class="muted small">Methods: OES, ratio/MWP thermometry, high‑speed imaging</div>
+            <div class="research-card h-100">
+              <div class="bg" style="background-image:url('assets/images/research-laser.jpg');"></div>
+              <div class="shade"></div>
+              <div class="content">
+                <h3 class="h5 mb-1">Laser-Driven Processing of Lunar Regolith</h3>
+                <p class="mb-2">Studying mass-loss, vapor composition, and melt evolution under high-flux CW fiber lasers.</p>
+                <div class="muted small">Methods: OES, ratio/MWP thermometry, high-speed imaging</div>
+              </div>
             </div>
           </div>
           <div class="col-md-6">
-            <div class="p-3 border rounded-3 h-100">
-              <h3 class="h5 mb-1" style="color:var(--brand);">Temperature Diagnostics</h3>
-              <p class="mb-2">Building a robust pipeline for multi‑wavelength pyrometry with calibration routines and uncertainty analysis.</p>
-              <div class="muted small">Tools: Python, optics/photometry, calibration lamps, integrating spheres</div>
+            <div class="research-card h-100">
+              <div class="bg" style="background-image:url('assets/images/research-thermometry.jpg');"></div>
+              <div class="shade"></div>
+              <div class="content">
+                <h3 class="h5 mb-1">Temperature Diagnostics</h3>
+                <p class="mb-2">Building a robust pipeline for multi-wavelength pyrometry with calibration routines and uncertainty analysis.</p>
+                <div class="muted small">Tools: Python, optics/photometry, calibration lamps, integrating spheres</div>
+              </div>
             </div>
           </div>
         </div>
